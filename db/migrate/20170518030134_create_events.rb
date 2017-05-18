@@ -7,6 +7,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.datetime :end_time
       t.string :category
       t.string :regions
+      t.integer :traffic
 
       t.timestamps
     end
