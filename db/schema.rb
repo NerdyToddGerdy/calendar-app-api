@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170518031739) do
+ActiveRecord::Schema.define(version: 20170518210103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-    t.string   "event_name"
-    t.date     "date"
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.string   "category"
-    t.string   "regions"
-    t.integer  "traffic"
-    t.integer  "region_id"
+    t.string  "event_name"
+    t.date    "date"
+    t.string  "category"
+    t.string  "regions"
+    t.integer "traffic"
+    t.integer "region_id"
+    t.time    "start_time"
+    t.time    "end_time"
   end
 
   create_table "regions", force: :cascade do |t|
@@ -36,12 +36,12 @@ ActiveRecord::Schema.define(version: 20170518031739) do
   create_table "user_events", force: :cascade do |t|
     t.string   "user_event_name"
     t.date     "date"
-    t.datetime "start_time"
-    t.datetime "end_time"
     t.string   "category"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "user_id"
+    t.time     "start_time"
+    t.time     "end_time"
   end
 
   create_table "users", force: :cascade do |t|
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20170518031739) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
 end
