@@ -6,24 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create([
-    {username: "pizza", full_name: "bob aid", password: "asdfghjk", full_address: "agdgsg", is_admin: true, email_address: "afsh@hotmail.com", password_digest: "sdgdhd"},
-    {username: "hamburger", full_name: "Sun kiss", password: "aafasfk", full_address: "dhngg", is_admin: false, email_address: "jlg@yahoo.com", password_digest: "sdgdhd"},
+
+Region.create([
+    {region_name: "Brooklyn", shorthand:"BK"},
+    {region_name: "queens", shorthand:"Q"}
     ])
 
-User_Event.create([
-    {user_event_name: "picnic", date: 2/2/17, start_time: 3:30, end_time: 3:40, category: "sports"},
-    {user_event_name: "karaoke", date: 3/2/17, start_time: 3:30, end_time: 3:40, category: "sports"},
+User.create([
+    {username: "pizza", full_name: "bob aid", password: "1234", full_address: "1234 poodle str.", is_admin: false, email_address: "hello@world.com"},
+    {username: "hamburger", full_name: "cool aid", password: "abcd", full_address: "1234 hound str.", is_admin: false, email_address: "bye@world.com"}
+    ])
+
+UserEvent.create([
+    {user_event_name: "picnic", user_id: 1, date: "03/03/2017", start_time: "3:30", end_time: "4:40", category: "fun"},
+    {user_event_name: "soccer", user_id: 2, date: "03/20/2017", start_time: "12:30", end_time: "1:40", category: "fun"}
     ])
 
 
 Event.create([
-        {event_name: "rockOn", date: 1/1/17, start_time:1:33, end_time: 2:33, category: "concert", region: "queens", traffic: 100},
-        {event_name: "rocksteady", date: 2/1/17, start_time:3:33, end_time: 4:33, category: "concert", region: "brooklyn", traffic: 200}
+        {event_name: "rockOn", region_id: 1, date: "04/05/2017", start_time: "5:00", end_time: "6:00", category: "business", regions: "NY", traffic: 100},
+        {event_name: "rockSteady", region_id: 2, date: "05/05/2017", start_time: "6:00", end_time: "9:00", category: "business", regions: "Q", traffic: 200}
         ])
-
-Region.create([
-    {region_name: "Brooklyn", shorthand:"BK"},
-    {region_name: "Queens", shorthand:"Q"}
-    ])
-end
