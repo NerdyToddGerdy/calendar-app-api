@@ -1,5 +1,5 @@
 class EigthMigration < ActiveRecord::Migration[5.0]
-      def change
-           add_index :users, [:username], unique: true
-      end
+      # def change
+      #      add_index :users, [:username], unique: true
+      # end
 end
