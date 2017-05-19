@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'faker'
 #jimd add pw
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 gem 'jwt'
