@@ -1,29 +1,51 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+10.times do
+    Region.create(
+        region_name: Faker::Name.title,
+        shorthand: Faker::Name.suffix
+    )
+end
 
+10.times do
+    Event.create(
+        region_id: Faker::Number.between(1, 4),
+        event_name: Faker::Zelda.game,
+        date: Faker::Date.forward(23),
+        start_time: Faker::Time.between(2.days.ago, Date.today, :morning),
+        end_time: Faker::Time.between(2.days.ago, Date.today, :afternoon),
+        category: Faker::SlackEmoji.people,
+        regions: Faker::Name.title,
+        traffic: Faker::Number.number(3)
+    )
+end
 
-Region.create([
-    {region_name: "Brooklyn", shorthand:"BK"},
-    {region_name: "queens", shorthand:"Q"}
-    ])
+10.times do
+    User.create(
+        username:  Faker::Name.name,
+        full_name: Faker::Friends.character,
+        password: Faker::Friends.character,
+        full_address: Faker::Address.street_address,
+        is_admin: Faker::Boolean.boolean(0.2),
+        email_address: Faker::Internet.email,
+        password_digest: ""
+    )
+end
 
+<<<<<<< HEAD
 User.create([
     {username: "pizza2", full_name: "bob aid", password: "1234", full_address: "1234 poodle str.", is_admin: false, email_address: "hello@world.com"},
     {username: "hamburger2", full_name: "cool aid", password: "abcd", full_address: "1234 hound str.", is_admin: false, email_address: "bye@world.com"}
     ])
-
-UserEvent.create([
-    {user_event_name: "picnic", user_id: 1, user_event_date: "03/03/2017", start_time: "3:30", end_time: "4:40", category: "fun"},
-    {user_event_name: "soccer", user_id: 2, user_event_date: "03/20/2017", start_time: "12:30", end_time: "1:40", category: "fun"}
-    ])
+=======
+>>>>>>> a34a2697b8e665efaa3481097d22317bcdf217c7
 
 
-Event.create([
-        {event_name: "rockOn", region_id: 1, event_date: "04/05/2017", start_time: "5:00", end_time: "6:00", category: "business", regions: "NY", traffic: 100},
-        {event_name: "rockSteady", region_id: 2, event_date: "05/05/2017", start_time: "6:00", end_time: "9:00", category: "business", regions: "Q", traffic: 200}
-        ])
+10.times do
+    UserEvent.create(
+        user_id: Faker::Number.between(1, 100),
+        user_event_name: Faker::Zelda.game,
+        date: Faker::Date.forward(23),
+        start_time: Faker::Time.between(2.days.ago, Date.today, :morning),
+        end_time: Faker::Time.between(2.days.ago, Date.today, :afternoon),
+        category: Faker::SlackEmoji.people
+    )
+end
