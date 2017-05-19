@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20170518210103) do
 
   create_table "events", force: :cascade do |t|
     t.string  "event_name"
-    t.date    "event_date"
+    t.date    "date"
     t.string  "category"
     t.string  "regions"
     t.integer "traffic"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20170518210103) do
 
   create_table "user_events", force: :cascade do |t|
     t.string   "user_event_name"
-    t.date     "user_event_date"
+    t.date     "date"
     t.string   "category"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
