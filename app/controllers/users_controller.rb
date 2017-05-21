@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
-  before_action :authenticate_token, except: [:login, :create]
-  before_action :authorize_user, except: [:login, :create, :index]
+  # original jim d
+  # before_action :authenticate_token, except: [:login, :create]
+  # before_action :authorize_user, except: [:login, :create, :index]
+
+  before_action :authenticate_token, except: [:login, :create,:show, :update, :destroy]
+  before_action :authorize_user, except: [:login, :create, :index,:show, :update, :destroy]
 
 #--------------------------------------------------------------------#
   def authorize_user
@@ -55,14 +59,18 @@ class UsersController < ApplicationController
   def update
     if @user.update(user_params)
       render json: @user
+      puts "update user success #{@user}"
     else
       render json: @user.errors, status: :unprocessable_entity
+      puts "error update user #{@user}"
     end
   end
 
   # DELETE /users/1
   def destroy
     @user.destroy
+    render json: @user
+    puts "destroy #{@user}"
   end
 
   private

@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#jimd add pw
+# gem 'angularjs-rails'
+# gem 'angular-ui-bootstrap-rails' #for bootstrap UI
+
 gem 'faker'
 #jimd add pw
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'

@@ -21,6 +21,7 @@ class UserEventsController < ApplicationController
       render json: @user_event, status: :created, location: @user_event
     else
       render json: @user_event.errors, status: :unprocessable_entity
+      puts "create user event error #{user_event_params}"
     end
   end
 
@@ -30,6 +31,7 @@ class UserEventsController < ApplicationController
       render json: @user_event
     else
       render json: @user_event.errors, status: :unprocessable_entity
+
     end
   end
 
