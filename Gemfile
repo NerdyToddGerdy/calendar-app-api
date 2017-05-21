@@ -8,6 +8,13 @@ end
 #jimd add pw
 # gem 'angularjs-rails'
 # gem 'angular-ui-bootstrap-rails' #for bootstrap UI
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg', '~> 0.18'
+end
 
 gem 'faker'
 #jimd add pw
