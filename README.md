@@ -1,24 +1,30 @@
-# README
+# Will I make it on Time?
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Brief Description
+Our site is designed to help you determine if there are other events going on in your area. Create your events then compare with events in the regions that may conflict with your events.
 
-Things you may want to cover:
+## Live site
+https://warm-basin-51846.herokuapp.com/
 
-* Ruby version
+## Live Database
+https://hidden-peak-32798.herokuapp.com/users
 
-* System dependencies
+## Repositories
+https://github.com/Toadilicious/calendar-app-api
+https://github.com/Toadilicious/calendar_app_frontend
 
-* Configuration
+## Technologies Used
+ - HTML 5
+ - CSS3
+ - SASS
+ - Ruby on Rails
+ - AngularJS
+ - express
 
-* Database creation
+## External Sources
+ - Faker - https://github.com/stympy/faker
 
-* Database initialization
+## Technical Challenges
+ -
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Expected Updates
