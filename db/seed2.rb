@@ -12,10 +12,10 @@ Region.create([
     {region_name: "queens", shorthand:"Q"}
     ])
 
-# User.create([
-#     {username: "pizza2", full_name: "bob aid", password: "1234", full_address: "1234 poodle str.", is_admin: false, email_address: "hello@world.com"},
-#     {username: "hamburger2", full_name: "cool aid", password: "abcd", full_address: "1234 hound str.", is_admin: false, email_address: "bye@world.com"}
-#     ])
+User.create([
+    {username: "pizza2", full_name: "bob aid", password: "1234", full_address: "1234 poodle str.", is_admin: false, email_address: "hello@world.com"},
+    {username: "hamburger2", full_name: "cool aid", password: "abcd", full_address: "1234 hound str.", is_admin: false, email_address: "bye@world.com"}
+    ])
 
 UserEvent.create([
     {user_event_name: "picnic", user_id: 1, user_event_date: "03/03/2017", start_time: "3:30", end_time: "4:40", category: "fun"},
