@@ -47,7 +47,8 @@ class UserEventsController < ApplicationController
     end
 
     # Only allow a trusted parameter "white list" through.
+    #jim d added :user_id
     def user_event_params
-      params.require(:user_event).permit(:user_event_name, :date, :start_time, :end_time, :category)
+      params.require(:user_event).permit(:user_event_name, :date, :start_time, :end_time, :category,:user_id)
     end
 end
