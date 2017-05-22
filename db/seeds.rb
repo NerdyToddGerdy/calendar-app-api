@@ -6,25 +6,25 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-4.times do
-    Region.create(
-        region_name: Faker::Name.title,
-        shorthand: Faker::Name.suffix
-    )
-end
-# 
-# 10.times do
-#     Event.create(
-#         region_id: Faker::Number.between(1, 4),
-#         event_name: Faker::Zelda.game,
-#         date: Faker::Date.forward(23),
-#         start_time: Faker::Time.between(2.days.ago, Date.today, :morning),
-#         end_time: Faker::Time.between(2.days.ago, Date.today, :afternoon),
-#         category: Faker::SlackEmoji.people,
-#         regions: Faker::Name.title,
-#         traffic: Faker::Number.number(3)
+# 4.times do
+#     Region.create(
+#         region_name: Faker::Name.title,
+#         shorthand: Faker::Name.suffix
 #     )
 # end
+
+10.times do
+    Event.create(
+        region_id: Faker::Number.between(1, 4),
+        event_name: Faker::Zelda.game,
+        date: Faker::Date.forward(23),
+        start_time: Faker::Time.between(2.days.ago, Date.today, :morning),
+        end_time: Faker::Time.between(2.days.ago, Date.today, :afternoon),
+        category: Faker::SlackEmoji.people,
+        regions: Faker::Name.title,
+        traffic: Faker::Number.number(3)
+    )
+end
 #
 # 10.times do
 #     User.create(
