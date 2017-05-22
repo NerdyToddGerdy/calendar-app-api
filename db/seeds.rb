@@ -27,10 +27,10 @@ end
 end
 
 
-User.create([
-    {username: "pizza2", full_name: "bob aid", password: "1234", full_address: "1234 poodle str.", is_admin: false, email_address: "hello@world.com"},
-    {username: "hamburger2", full_name: "cool aid", password: "abcd", full_address: "1234 hound str.", is_admin: false, email_address: "bye@world.com"}
-    ])
+# User.create([
+#     {username: "pizza2", full_name: "bob aid", password: "1234", full_address: "1234 poodle str.", is_admin: false, email_address: "hello@world.com"},
+#     {username: "hamburger2", full_name: "cool aid", password: "abcd", full_address: "1234 hound str.", is_admin: false, email_address: "bye@world.com"}
+#     ])
 # 10.times do
 #     User.create(
 #         username:  Faker::Name.name,
