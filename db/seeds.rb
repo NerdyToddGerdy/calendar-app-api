@@ -17,7 +17,7 @@
     Event.create(
         region_id: Faker::Number.between(1, 4),
         event_name: Faker::Zelda.game,
-        date: Faker::Date.forward(23),
+        event_date: Faker::Date.forward(23),
         start_time: Faker::Time.between(2.days.ago, Date.today, :morning),
         end_time: Faker::Time.between(2.days.ago, Date.today, :afternoon),
         category: Faker::SlackEmoji.people,
