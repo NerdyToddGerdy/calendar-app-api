@@ -41,7 +41,7 @@ end
 #
 10.times do
     UserEvent.create(
-        user_id: Faker::Number.between(1, 100),
+        user_id: Faker::Number.between(1, 10),
         user_event_name: Faker::Zelda.game,
         user_event_date: Faker::Date.forward(23),
         start_time: Faker::Time.between(2.days.ago, Date.today, :morning),
