@@ -46,7 +46,7 @@
 #
 10.times do
     UserEvent.create(
-        user_id: Faker::Number.between(7),
+        user_id: 7,
         user_event_name: Faker::Book.title,
         user_event_date: Faker::Date.forward(23),
         start_time: Faker::Time.between(2.days.ago, Date.today, :morning),
