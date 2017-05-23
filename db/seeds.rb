@@ -44,11 +44,11 @@
 # end
 # #
 #
-10.times do
+1.times do
     UserEvent.create(
-        user_id: 9,
+        user_id: 7,
         user_event_name: Faker::Book.title,
-        user_event_date: Faker::Date.forward(23),
+        user_event_date: '2017-05-22',
         start_time: Faker::Time.between(2.days.ago, Date.today, :morning),
         end_time: Faker::Time.between(2.days.ago, Date.today, :afternoon),
         category: Faker::SlackEmoji.people
