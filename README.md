@@ -35,6 +35,7 @@ https://github.com/Toadilicious/calendar_app_frontend
 ## Technical Challenges
  - At first getting merge conflicts
  - Using JWT authentication
+ - Rails did not update schema after models were already generated
 
 ## Expected Updates
 
