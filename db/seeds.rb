@@ -6,25 +6,25 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-4.times do
-    Region.create(
-        region_name: Faker::Name.title,
-        shorthand: Faker::Name.suffix
-    )
-end
-
-50.times do
-    Event.create(
-        region_id: Faker::Number.between(1, 4),
-        event_name: Faker::Food.ingredient,
-        event_date: Faker::Date.forward(23),
-        start_time: Faker::Time.between(2.days.ago, Date.today, :morning),
-        end_time: Faker::Time.between(2.days.ago, Date.today, :afternoon),
-        category: Faker::SlackEmoji.people,
-        regions: Faker::Name.title,
-        traffic: Faker::Number.number(3)
-    )
-end
+# 4.times do
+#     Region.create(
+#         region_name: Faker::Name.title,
+#         shorthand: Faker::Name.suffix
+#     )
+# end
+#
+# 50.times do
+#     Event.create(
+#         region_id: Faker::Number.between(1, 4),
+#         event_name: Faker::Food.ingredient,
+#         event_date: Faker::Date.forward(23),
+#         start_time: Faker::Time.between(2.days.ago, Date.today, :morning),
+#         end_time: Faker::Time.between(2.days.ago, Date.today, :afternoon),
+#         category: Faker::SlackEmoji.people,
+#         regions: Faker::Name.title,
+#         traffic: Faker::Number.number(3)
+#     )
+# end
 
 
 # User.create([
@@ -44,13 +44,14 @@ end
 # end
 # #
 #
-20.times do
+1.times do
     UserEvent.create(
-        user_id: Faker::Number.between(1, 2),
+        user_id: 7,
         user_event_name: Faker::Book.title,
-        user_event_date: Faker::Date.forward(23),
+        user_event_date: 'Sun Jan 01 2017 00:00:00 GMT-0500 (EST)',
         start_time: Faker::Time.between(2.days.ago, Date.today, :morning),
         end_time: Faker::Time.between(2.days.ago, Date.today, :afternoon),
         category: Faker::SlackEmoji.people
     )
+
 end
