@@ -8,7 +8,7 @@ end
 # gem 'angular-ui-bootstrap-rails' #for bootstrap UI
 gem 'faker'
 #jimd add pw
-gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 gem 'jwt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.3'
